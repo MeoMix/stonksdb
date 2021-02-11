@@ -1,0 +1,8 @@
+.node-persist
+
+# dependencies
+/node_modules
+
+redditSecrets.ts
+
+npm-debug.log*
