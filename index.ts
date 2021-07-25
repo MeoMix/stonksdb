@@ -7,15 +7,15 @@ import CoinGecko from 'coingecko-api';
 
 const app = express();
 
-// app.use(cors());
+app.use(cors());
 
-// app.use(function(req, res, next) {
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader("Access-Control-Allow-Credentials", 'true');
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-//   res.setHeader('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader("Access-Control-Allow-Credentials", 'true');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 const PORT = 8000;
 app.get('/', (req,res) => res.send('Express + TypeScript Server RAWR'));
