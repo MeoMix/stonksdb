@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 app.get('/', (req,res) => res.send('Express + TypeScript Server RAWR'));
 
 app.listen(PORT, () => {
